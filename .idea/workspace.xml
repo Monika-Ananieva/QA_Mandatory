@@ -28,7 +28,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587736532364</updated>
       <workItem from="1587736537637" duration="4000" />
-      <workItem from="1587736735157" duration="9873000" />
+      <workItem from="1587736735157" duration="11799000" />
     </task>
     <servers />
   </component>
@@ -40,5 +40,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.151.1920.1040@0.0.1920.1040" timestamp="1587736863368" />
+    <state x="2502" y="317" width="1653" height="857" key="dock-window-1" timestamp="1587749849828">
+      <screen x="1920" y="151" width="1920" height="1040" />
+    </state>
+    <state x="2502" y="317" width="1653" height="857" key="dock-window-1/0.0.1920.1040/1920.151.1920.1040@1920.151.1920.1040" timestamp="1587749849828" />
+    <state x="2433" y="266" width="1653" height="857" key="dock-window-2" timestamp="1587749975687">
+      <screen x="1920" y="151" width="1920" height="1040" />
+    </state>
+    <state x="2433" y="266" width="1653" height="857" key="dock-window-2/0.0.1920.1040/1920.151.1920.1040@1920.151.1920.1040" timestamp="1587749975687" />
   </component>
 </project>

@@ -3,9 +3,6 @@ import { Router, Link } from '@reach/router';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Votes from './Votes'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-
-
 
 
 class Question extends Component {
@@ -64,7 +61,7 @@ class Question extends Component {
             })
         });
         let data = await response.json();
-        //await this.getQuestions();
+        await this.getAnswers();
     }
 
     async addVote(refId){

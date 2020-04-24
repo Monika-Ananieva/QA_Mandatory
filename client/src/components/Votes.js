@@ -9,6 +9,7 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 library.add(fab, faChevronUp);
 
 class Votes extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
