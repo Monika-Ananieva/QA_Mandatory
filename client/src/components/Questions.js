@@ -51,18 +51,7 @@ class Questions extends Component {
         const { questions } = this.state;
         return(
             <Container>
-                <Button
-                    color="dark"
-                    style={{marginBottom: '2rem'}}
-                    onClick={() =>{
-                        const name = prompt('Enter a Question');
-                        if(name) {
-                            this.addQuestion(name).then();
-                        }
-                    }}
-                >Add Question
-                </Button>
-
+                <h1>Browse current questions:</h1>
                 <ListGroup>
                     <TransitionGroup>
                         {questions.map(q => (
@@ -75,6 +64,18 @@ class Questions extends Component {
                         ))}
                     </TransitionGroup>
                 </ListGroup>
+
+                <Button
+                    color="dark"
+                    style={{marginTop: '2rem'}}
+                    onClick={() =>{
+                        const name = prompt('Enter a Question');
+                        if(name) {
+                            this.addQuestion(name).then();
+                        }
+                    }}
+                >Add a new question
+                </Button>
             </Container>
         );
     }

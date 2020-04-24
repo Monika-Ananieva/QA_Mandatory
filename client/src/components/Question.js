@@ -84,17 +84,7 @@ class Question extends Component {
         if(question) {
             content =
                 <Container>
-                    <Button
-                        color="dark"
-                        style={{marginBottom: '2rem'}}
-                        onClick={() => {
-                            const answer = prompt('Enter an Answer');
-                            if (answer) {
-                                this.addAnswer(answer).then();
-                            }
-                        }}
-                    >Add an Answer
-                    </Button>
+                    <Link to="/">Go Back</Link>
                     <h1>{question.name}</h1>
 
                     <ListGroup>
@@ -102,8 +92,16 @@ class Question extends Component {
                             {answers.filter((answer) => answer.ref_id === this.props.id).map(a => (
                                 <CSSTransition key={a._id} timeout={500} classNames="fade">
                                     <ListGroupItem>
-                                        {a.answer} &nbsp;
-                                        {this.state.votes.filter((v) => v.ref_id === a._id).map(v => v._id).length }
+                                        <div className="row">
+                                            <div className="col-lg-1">
+                                                {this.state.votes.filter((v) => v.ref_id === a._id).map(v => v._id).length }
+                                            </div>
+
+                                            <div className="col-lg-11">
+                                                <p>{a.answer}</p>
+                                            </div>
+                                        </div>
+
                                         <Router>
                                             <Votes path="/" votes={this.state.votes} addVote={() => this.addVote(a._id)}></Votes>
                                         </Router>
@@ -113,11 +111,25 @@ class Question extends Component {
                             ))}
                         </TransitionGroup>
                     </ListGroup>
-                    <Link to="/">Return</Link>
+
+                    <Button
+                        color="dark"
+                        style={{marginTop: '2rem', marginBottom: '2rem'}}
+                        onClick={() => {
+                            const answer = prompt('Enter an Answer');
+                            if (answer) {
+                                this.addAnswer(answer).then();
+                            }
+                        }}
+                    >Add an Answer
+                    </Button>
+                    <br/>
+
                 </Container>
         }
         return content;
     }
 }
+
 
 export default Question;
