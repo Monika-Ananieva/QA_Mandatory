@@ -27,9 +27,9 @@ router.post('/add', (req, res) => {
 // @desc Get A Question
 // @access Public
 router.get('/:id', (req, res) => {
-    const id = req.body.id;
-    const getQuestion = Question.find(r => r.id === parseInt(id))
-    res.json(getQuestion);
+    const id = req.params.id;
+    const q = Question.find(e => e.id === parseInt(id));
+    res.json(q);
 });
 
 module.exports = router;

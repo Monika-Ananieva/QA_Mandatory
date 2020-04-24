@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 const questions = require('./routes/api/questions');
 const answers = require('./routes/api/answers');
+const votes = require('./routes/api/votes');
 
 const app = express();
 app.use(express.json());
@@ -21,6 +22,7 @@ mongoose
 //Use Routes
 app.use('/api/questions', questions);
 app.use('/api/answers', answers);
+app.use('/api/votes', votes);
 
 const port = process.env.PORT || 5000;
 

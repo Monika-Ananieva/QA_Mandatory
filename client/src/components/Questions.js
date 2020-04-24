@@ -43,7 +43,7 @@ class Questions extends Component {
                 name: name
             })
         });
-        let data = await response.json();
+        //let data = await response.json();
         await this.getQuestions();
     }
 
