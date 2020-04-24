@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import {Button, Container} from "reactstrap";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faChevronUp);
 
 class Votes extends Component {
     constructor(props) {
@@ -16,7 +24,9 @@ class Votes extends Component {
 
         return(
             <div>
-                <input onClick={(event) => this.handleButtonClick(event)} type="submit" value="Upvote" className=""/>
+                <Button onClick={(event) => this.handleButtonClick(event)} type="submit" className="btn">
+                    <FontAwesomeIcon icon="chevron-up" />
+                </Button>
             </div>
         );
 

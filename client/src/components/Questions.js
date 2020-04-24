@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Router, Link } from '@reach/router';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import {v4 as uuid} from 'uuid';
+
 
 class Questions extends Component {
 

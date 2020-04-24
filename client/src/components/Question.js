@@ -3,6 +3,10 @@ import { Router, Link } from '@reach/router';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Votes from './Votes'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
+
+
 
 class Question extends Component {
 
@@ -84,7 +88,7 @@ class Question extends Component {
         if(question) {
             content =
                 <Container>
-                    <Link to="/">Go Back</Link>
+                    <Link to="/" className="back">Go Back</Link>
                     <h1>{question.name}</h1>
 
                     <ListGroup>
@@ -94,7 +98,10 @@ class Question extends Component {
                                     <ListGroupItem>
                                         <div className="row">
                                             <div className="col-lg-1">
-                                                {this.state.votes.filter((v) => v.ref_id === a._id).map(v => v._id).length }
+                                                <p className="vote-number">{this.state.votes.filter((v) => v.ref_id === a._id).map(v => v._id).length }</p>
+                                                <Router>
+                                                    <Votes path="/" votes={this.state.votes} addVote={() => this.addVote(a._id)}></Votes>
+                                                </Router>
                                             </div>
 
                                             <div className="col-lg-11">
@@ -102,9 +109,7 @@ class Question extends Component {
                                             </div>
                                         </div>
 
-                                        <Router>
-                                            <Votes path="/" votes={this.state.votes} addVote={() => this.addVote(a._id)}></Votes>
-                                        </Router>
+
                                     </ListGroupItem>
                                 </CSSTransition>
 

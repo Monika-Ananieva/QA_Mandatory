@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&&family=Roboto:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Montserrat:wght@400;700&&family=Roboto:wght@100;700&display=swap');
 /*
 font-family: 'Roboto', sans-serif;
 font-family: 'Montserrat', sans-serif;
@@ -68,6 +68,15 @@ p {
     color: #68696A;
 }
 
+.vote-number {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 55px;
+    color: #F48FB1;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 5px;
+}
+
 /* borders */
 .list-group-item {
     position: relative;
@@ -79,11 +88,22 @@ p {
     margin-bottom: 15px;
 }
 
+/* links */
 .list-group-item a {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     color: #68696A;
     cursor: pointer;
+}
+
+.back {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #68696A;
+}
+
+.back:hover, back:focus {
+    color: #F48FB1;
 }
 
 /* button */
@@ -93,12 +113,7 @@ p {
     color: white;
 }
 
-.btn:hover {
-    background-color: #f06292;
-    border-color: #f06292;
-    color:white;
-}
-.btn-dark:not(:disabled):not(.disabled).active, .btn-dark:not(:disabled):not(.disabled):active, .show>.btn-dark.dropdown-toggle, .btn-dark.focus, .btn-dark:focus {
+.btn:hover, .btn-dark:not(:disabled):not(.disabled).active, .btn-dark:not(:disabled):not(.disabled):active, .show>.btn-dark.dropdown-toggle, .btn-dark.focus, .btn-dark:focus, .btn-secondary:focus {
     background-color: #f06292;
     border-color: #f06292;
     color:white;
