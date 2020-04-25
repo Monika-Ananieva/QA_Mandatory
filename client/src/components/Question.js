@@ -81,7 +81,7 @@ class Question extends Component {
     render() {
         const { answers } = this.state;
         const question = this.props.getQuestion(this.props.id);
-        let content = <p>Loading</p>;
+        let content = <p className="loading">Loading</p>;
         if(question) {
             content =
                 <Container>
@@ -94,14 +94,14 @@ class Question extends Component {
                                 <CSSTransition key={a._id} timeout={500} classNames="fade">
                                     <ListGroupItem>
                                         <div className="row">
-                                            <div className="col-lg-1">
+                                            <div className="col-lg-1 col-md-1">
                                                 <p className="vote-number">{this.state.votes.filter((v) => v.ref_id === a._id).map(v => v._id).length }</p>
                                                 <Router>
                                                     <Votes path="/" votes={this.state.votes} addVote={() => this.addVote(a._id)}></Votes>
                                                 </Router>
                                             </div>
 
-                                            <div className="col-lg-11">
+                                            <div className="col-lg-11 col-md-11">
                                                 <p>{a.answer}</p>
                                             </div>
                                         </div>

@@ -68,6 +68,12 @@ p {
     color: #68696A;
 }
 
+.loading {
+    text-align: center;
+    font-size: 30px;
+    color: #F48FB1;
+}
+
 .vote-number {
     font-family: 'Open Sans', sans-serif;
     font-size: 55px;
