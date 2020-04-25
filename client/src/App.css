@@ -36,6 +36,7 @@ font-family: 'Montserrat', sans-serif;
     }
 }
 
+
 /* navigation */
 .navbar-brand {
     font-family: 'Roboto', sans-serif;
@@ -54,6 +55,12 @@ nav {
 }
 
 /* text */
+@media (max-width: 767px) {
+    p {
+        padding-top: 15px;
+    }
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
