@@ -41,13 +41,11 @@ class App extends Component {
   render () {
     return(
     <div className="App">
-      <AppNavbar/>
-      <>
+      <AppNavbar />
       <Router>
         <Questions path="/" />
-        <Question path="/:id" getQuestion={id => this.getQuestion(id)}></Question>
+        <Question path="/:id" getQuestion={id => this.getQuestion(id)} />
       </Router>
-        </>
     </div>); }
 }
 

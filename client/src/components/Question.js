@@ -13,7 +13,13 @@ class Question extends Component {
         this.state = {
             answers: [],
             votes: []
-        }
+        };
+
+        // Sync the answers and votes with the server every now and then, so the client doesn't go out of sync
+        setInterval(() => {
+            this.getAnswers().then();
+            this.getAllVotes().then();
+        }, 2000);
     }
 
     componentDidMount() {
@@ -31,10 +37,6 @@ class Question extends Component {
         });
     }
 
-    getAnswersByRef(ref_id){
-        return this.state.answers.find(a => a.id === ref_id);
-    }
-
     async getAnswers(){
         //defining the route and saving it in url
         let url = 'api/answers';
@@ -50,7 +52,7 @@ class Question extends Component {
 
     async addAnswer(answer){
         let url = 'api/answers/add';
-        let response = await fetch(url, {
+        await fetch(url, {
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -60,13 +62,12 @@ class Question extends Component {
                 ref_id: this.props.id
             })
         });
-        let data = await response.json();
         await this.getAnswers();
     }
 
     async addVote(refId){
         let url = 'api/votes/add';
-        let response = await fetch(url, {
+        await fetch(url, {
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -75,7 +76,17 @@ class Question extends Component {
                 ref_id: refId
             })
         });
-        let data = await response.json();
+
+        // Update the state immediately so that the UI feels responsive
+        let votes = [...this.state.votes];
+        votes.push({
+            ref_id: refId,
+            __v: 0,
+            _id: null
+        });
+        this.setState({
+            votes: votes
+        });
     }
 
     render() {
@@ -97,7 +108,7 @@ class Question extends Component {
                                             <div className="col-lg-1 col-md-1">
                                                 <p className="vote-number">{this.state.votes.filter((v) => v.ref_id === a._id).map(v => v._id).length }</p>
                                                 <Router>
-                                                    <Votes path="/" votes={this.state.votes} addVote={() => this.addVote(a._id)}></Votes>
+                                                    <Votes path="/" addVote={() => this.addVote(a._id)} />
                                                 </Router>
                                             </div>
 

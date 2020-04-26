@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, Container} from "reactstrap";
+import {Button} from "reactstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -12,9 +12,6 @@ class Votes extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            votes: []
-        }
     }
 
     handleButtonClick(event){
@@ -25,7 +22,7 @@ class Votes extends Component {
 
         return(
             <div>
-                <Button onClick={(event) => this.handleButtonClick(event)} type="submit" className="btn">
+                <Button onClick={(event) => this.handleButtonClick(event)} type="submit" className="btn" data-testid="votes-button">
                     <FontAwesomeIcon icon="chevron-up" />
                 </Button>
             </div>

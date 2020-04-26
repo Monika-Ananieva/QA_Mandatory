@@ -18,10 +18,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Git\QA_Mandatory\client\src\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Git\QA_Mandatory" />
       <recent name="E:\Git\QA_Mandatory\server" />
@@ -46,7 +51,8 @@
       <workItem from="1587843283411" duration="835000" />
       <workItem from="1587857105905" duration="156000" />
       <workItem from="1587857564253" duration="88000" />
-      <workItem from="1587915514174" duration="1022000" />
+      <workItem from="1587915514174" duration="1734000" />
+      <workItem from="1587923774746" duration="5729000" />
     </task>
     <servers />
   </component>
@@ -66,5 +72,9 @@
       <screen x="1920" y="151" width="1920" height="1040" />
     </state>
     <state x="2433" y="266" width="1653" height="857" key="dock-window-2/0.0.1920.1040/1920.151.1920.1040@1920.151.1920.1040" timestamp="1587749975687" />
+    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1587927202585">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040/1920.151.1920.1040@0.0.1920.1040" timestamp="1587927202585" />
   </component>
 </project>
