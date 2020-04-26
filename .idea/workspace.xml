@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProjectId" id="1azRedHfaggQykulbbz68rCWjV9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -16,6 +19,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Git\QA_Mandatory" />
+      <recent name="E:\Git\QA_Mandatory\server" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -31,6 +41,12 @@
       <workItem from="1587736735157" duration="12049000" />
       <workItem from="1587815816380" duration="3780000" />
       <workItem from="1587822356245" duration="1437000" />
+      <workItem from="1587824407843" duration="134000" />
+      <workItem from="1587825438469" duration="30000" />
+      <workItem from="1587843283411" duration="835000" />
+      <workItem from="1587857105905" duration="156000" />
+      <workItem from="1587857564253" duration="88000" />
+      <workItem from="1587915514174" duration="1022000" />
     </task>
     <servers />
   </component>
